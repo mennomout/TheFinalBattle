@@ -14,6 +14,6 @@ namespace FinalBattle
             Health = health;
         }
 
-        public void TakeDamage(int damage) => Health -= damage;
+        public void ChangeHealth(int health) => Health += health;
     }
 }

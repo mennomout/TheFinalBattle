@@ -11,15 +11,23 @@ namespace FinalBattle
             return Console.ReadLine();
         }
 
-        private static int GetNumberChoice(int maxNum, int minNum = 1)
+        public static Character SingleTarget(Party party)
+        {
+            Console.WriteLine($"Who do you want to target?");
+            party.PrintNames();
+
+            return party.Members[GetIndexChoice(party.Members.Count)];
+        }
+
+        private static int GetIndexChoice(int maxNum, int minNum = 1)
         {
             string numberChoice = Console.ReadLine();
             if (int.TryParse(numberChoice, out int number) && (number >= minNum) && (number <= maxNum))
-                return number;
+                return number - 1;
             else
             {
-                Console.WriteLine("That was not a number. Try again: ");
-                return GetNumberChoice(minNum, maxNum);
+                Console.WriteLine("That was not a (valid) number. Try again: ");
+                return GetIndexChoice(minNum, maxNum);
             }
         }
     }

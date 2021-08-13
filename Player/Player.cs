@@ -10,5 +10,8 @@ namespace FinalBattle
         {
             Name = name;
         }
+
+        public abstract void Turn(Party partyTurn, Party enemyParty);
+        public abstract IAction ChooseAction(Character charTurn, Party partyTurn, Party enemyParty);
     }
 }
