@@ -17,7 +17,7 @@ namespace FinalBattle
             IAction action = GetAction(actionName, actor, battle);
             action.Execute();
             
-            Thread.Sleep(5);
+            Thread.Sleep(5000);
         }
 
         private IAction GetAction(ActionNames actionNames, Character actor, Battle battle)
