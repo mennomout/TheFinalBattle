@@ -15,7 +15,7 @@ namespace FinalBattle
 
         public (Player, Player) CreatePlayers()
         {
-            while (keyPres != ConsoleKey.Enter)
+            while (_keyPres != ConsoleKey.Enter)
             {
                 Display();
                 MenuNavigation();

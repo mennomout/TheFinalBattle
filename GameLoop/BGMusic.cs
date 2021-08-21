@@ -5,6 +5,7 @@ namespace FinalBattle
 {
     public static class BGMusic
     {
+        // Source: https://www.reddit.com/r/csharp/comments/1k8mxd/i_accidently_the_whole_application/
         public static void PlayBackgroundMusic()
         {
             Console.Beep(659, 125);

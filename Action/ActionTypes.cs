@@ -2,6 +2,12 @@
 
 namespace FinalBattle
 {
+    // To add an action, follow these steps:
+    // 1. Create a new class inheriting from Action and implementing IAction;
+    // 2. Add the name from the class to the enum ActionNames and add a discription;
+    // 3. Add the Action class to the characters you wish to allow and use them;
+    // 4. Add the Action to the A.I. and Human GetAction() method.
+
     public class DoNothing : Action, IAction
     {
         public DoNothing(Character actor, params Character[] targets) : base(actor, targets) { Name = ActionNames.DoNothing; }

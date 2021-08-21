@@ -6,7 +6,7 @@ namespace FinalBattle
 {
     public static class Display
     {
-        public static void PrintCharacterNames(List<Character> characters)
+        public static void PrintTargets(List<Character> characters)
         {
             int number = 1;
 
@@ -50,21 +50,21 @@ namespace FinalBattle
             Console.ResetColor();
 
             Console.Write("HEROES: |");
-            PrintCharacterList(battle._heroes, actor);
+            PrintPartyMembers(battle._heroes, actor);
 
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("\n\n===========================VERSUS===============================\n");
             Console.ResetColor();
 
             Console.Write("MONSTERS: |");
-            PrintCharacterList(battle._monsters, actor);
+            PrintPartyMembers(battle._monsters, actor);
 
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("\n\n================================================================");
             Console.ResetColor();
         }
 
-        private static void PrintCharacterList(List<Character> characters, Character actor)
+        private static void PrintPartyMembers(List<Character> characters, Character actor)
         {
             foreach(Character character in characters)
             {
@@ -115,13 +115,6 @@ namespace FinalBattle
                 Console.ResetColor();
                 Console.Write(")");
             }
-
-        }
-        
-        public static string GetHealthStatus(Character character)
-        {
-            string health = new($"( HP: {character.Health} / {character._maxHealth} )");
-            return health;
         }
     }
 }

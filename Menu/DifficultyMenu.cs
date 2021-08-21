@@ -15,7 +15,7 @@ namespace FinalBattle
 
         public int LevelDificulty()
         {
-            while (keyPres != ConsoleKey.Enter)
+            while (_keyPres != ConsoleKey.Enter)
             {
                 Display();
                 MenuNavigation();
@@ -23,6 +23,7 @@ namespace FinalBattle
             return SelectDifficutly();
         }
 
+        // Returns a integer that represents the amount of battles in a level.
         private int SelectDifficutly()
         {
             Console.Clear();

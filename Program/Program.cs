@@ -26,25 +26,23 @@ try
         Party monsters1 = new(
             new UncodedOne(),
             new Skeleton("child skeleton", 2),
-            new Skeleton("limping skeleton", 3),
-            new Skeleton("armored skeleton", 6));
+            new Skeleton("limping skeleton", 3));
 
         Party monsters2 = new(
             new UncodedOne(),
-            new Skeleton("child skeleton", 2),
-            new Skeleton("limping skeleton", 3),
+            new Skeleton("mother skeleton", 4),
             new Skeleton("armored skeleton", 6));
 
         Party monsters3 = new(
             new UncodedOne(),
-            new Skeleton("child skeleton", 2),
-            new Skeleton("limping skeleton", 3),
-            new Skeleton("armored skeleton", 6));
+            new Skeleton("father skeleton", 6),
+            new Skeleton("skeleton king", 10));
 
         Battle battle1 = new(new() { heroes }, new() { monsters1 });
         Battle battle2 = new(new() { heroes }, new() { monsters2 });
         Battle battle3 = new(new() { heroes }, new() { monsters3 });
 
+        // Default difficutly is 1. Eacht difficulty adds a battle to the level. 
         Level levelOne = new(heroPlayer, monsterPlayer, battle1);
         if (difficulty == 2) levelOne = new(heroPlayer, monsterPlayer, battle1, battle2);
         if (difficulty == 3) levelOne = new(heroPlayer, monsterPlayer, battle1, battle2, battle3);

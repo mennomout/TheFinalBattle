@@ -10,7 +10,7 @@ namespace FinalBattle
     {
         protected List<string> _menuOptions;
         protected int _selectedIndex = 0;
-        protected ConsoleKey keyPres;
+        protected ConsoleKey _keyPres;
 
         protected void Display()
         {
@@ -30,10 +30,10 @@ namespace FinalBattle
 
         protected void MenuNavigation()
         {
-            keyPres = Console.ReadKey(true).Key;
+            _keyPres = Console.ReadKey(true).Key;
 
-            if (keyPres == ConsoleKey.UpArrow) Previous();
-            if (keyPres == ConsoleKey.DownArrow) Next();
+            if (_keyPres == ConsoleKey.UpArrow) Previous();
+            if (_keyPres == ConsoleKey.DownArrow) Next();
         }
 
         protected void Next()

@@ -15,8 +15,8 @@ namespace FinalBattle
 
         public bool Play()
         {
-            keyPres = ConsoleKey.Clear;
-            while (keyPres != ConsoleKey.Enter)
+            _keyPres = ConsoleKey.Clear;
+            while (_keyPres != ConsoleKey.Enter)
             {
                 Display();
                 MenuNavigation();

@@ -62,6 +62,7 @@ namespace FinalBattle
         }
     }
 
+    // The descriptions are used to make actions easier to read in the game.
     public enum ActionNames 
     {
         [Description("DO NOTHING")]

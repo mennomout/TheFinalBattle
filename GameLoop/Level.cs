@@ -16,6 +16,7 @@ namespace FinalBattle
             Monsters = monsters;
         }
 
+        // Plays each battle untill all battles are won or the heroes lose.
         public void Play()
         {
             foreach (Battle battle in Battles)
@@ -54,9 +55,9 @@ namespace FinalBattle
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("==========================================\n");
-            Console.WriteLine($"HEROES WON THE BATTLE!!!");
-            Console.WriteLine("\n==========================================");
+            Console.WriteLine("=========================================================\n");
+            Console.WriteLine($"HEROES WON THE BATTLE... BUT THE UNCODED ONE ESCAPES!!!");
+            Console.WriteLine("\n=========================================================");
             Console.ResetColor();
 
             Console.WriteLine("\nPress 'Enter' to start the next battle!!!");

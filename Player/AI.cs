@@ -10,6 +10,7 @@ namespace FinalBattle
 
         public override void Turn(Character actor, Battle battle)
         {
+            // A.I. picks randomly from it's list of actions but never skipping a turn.
             Random r = new();
             ActionNames actionName = actor.Actions[r.Next(1,actor.Actions.Count)];
             

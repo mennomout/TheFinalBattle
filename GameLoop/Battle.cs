@@ -26,15 +26,11 @@ namespace FinalBattle
 
                 if(CheckCharactersDeath(_heroes))
                 {
-                    WinMessage("MONSTERS");
                     HeroesLost = true;
                     break;
                 }   
                 if(CheckCharactersDeath(_monsters))
-                {
-                    WinMessage("HEROES");
                     break;
-                }
             }
         }
 
@@ -85,7 +81,5 @@ namespace FinalBattle
                     return false;
             return true;
         }
-
-        private void WinMessage(string name) => Console.WriteLine($"{name} won the battle");
     }
 }

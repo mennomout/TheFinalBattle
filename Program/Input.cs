@@ -7,15 +7,14 @@ namespace FinalBattle
     {
         public static string GetProgrammerName()
         {
-            Console.Write("Enter the name of your programmer hero: ");
+            Console.Write("Enter the name of your programming hero: ");
             return Console.ReadLine();
         }
 
-        // Returns a Character that is the target for a single target action.
         public static Character GetSingleTarget(List<Character> targets)
         {
             Console.WriteLine($"Who do you want to target?");
-            Display.PrintCharacterNames(targets);
+            Display.PrintTargets(targets);
 
             Character target = targets[GetIndexChoice(targets.Count)];
             if (target.Health <= 0)
